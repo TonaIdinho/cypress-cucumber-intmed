@@ -4,25 +4,25 @@ Feature: Manage Movement
         Given que o usuario esteja na tela inicial do site Seu Barriga
 
     Scenario: Criar movimentaçao valida    
-        When clicar na opçao Criar Movimentação
+        When clicar na opçao Criar Movimentaçao
         And preencher todos os campos
         And clicar em salvar
         Then deve ser exibida mensagem de sucesso ao adicionar movimentacao
 
     Scenario: Criar movimentaçao invalida    
-        When clicar no menu Criar Movimentaçao
+        When clicar na opçao Criar Movimentaçao
         And preencher campos deixando datas em branco
         And clicar em salvar
         Then deve ser exibida mensagem de erro de campos obrigatorios
 
     Scenario: Criar movimentaçao com formato de data incorreta 
-        When clicar no menu Criar Movimentaçao
+        When clicar na opçao Criar Movimentaçao
         And preencher campos deixando datas com formato incorreto    
         And clicar em salvar   
         Then deve ser exibida mensagem de erro de data invalido
 
     Scenario: Criar Movimentaçao com data futura
-        When clicar no menu Criar Movimentaçao
+        When clicar na opçao Criar Movimentaçao
         And preencher campos deixando datas movitenção com data futura 
         And clicar em salvar      
         Then deve ser exibida mensagem de erro de data futura
@@ -37,4 +37,4 @@ Feature: Manage Movement
         When clicar no na opção Contas
         And clicar no submenu Adicionar  
         And salvar um nome de conta ja existente
-        Then deverá ser exibida uma mensagem de erro
+        Then devera ser exibida uma mensagem de erro

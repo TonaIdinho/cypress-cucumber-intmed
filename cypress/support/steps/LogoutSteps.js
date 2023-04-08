@@ -2,12 +2,12 @@
 import LogoutPage from '../pageobjects/LogoutPage'
 const logoutPage = new LogoutPage
 
-Given("que estou logado no site Seu Barriga", () =>{
+Given("que o usuario esteja logado no site Seu Barriga", () =>{
     logoutPage.homePage()
 })
-When("clico no botao sair", () => {
+When("clicar no botao Sair na parte superior da tela", () => {
     logoutPage.exitButton()
 })
-Then("devo ser deslogado do site", () => {
+Then("o usuario devera ser redirecionado deslogado para a tela de login do site", () => {
     logoutPage.start()
 })

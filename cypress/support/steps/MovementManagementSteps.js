@@ -3,89 +3,89 @@ import MovementManagementPage from '../pageobjects/MovementManagementPage'
 const movementManagementPage = new MovementManagementPage
 
 Given("que o usuario esteja na tela inicial do site Seu Barriga", () => {
-    MovementManagementPage.homePage()
+    movementManagementPage.homePage()
 })
 
 When("clicar na opçao Criar Movimentaçao", () => {
-    MovementManagementPage.newMovementMenu()
+    movementManagementPage.newMovementMenu()
 })
 
 And("preencher todos os campos", () => {
-    MovementManagementPage.fillValidFields()
+    movementManagementPage.fillValidFields()
 })
 
 And("clicar em salvar", () => {
-    MovementManagementPage.clickSave()
+    movementManagementPage.clickSave()
 })
 
 Then("deve ser exibida mensagem de sucesso ao adicionar movimentacao", () => {
-    MovementManagementPage.successMovementMessage()
+    movementManagementPage.successMovementMessage()
 })
 
 When("clicar na opçao Criar Movimentaçao", () => {
-    MovementManagementPage.newMovementMenu()
+    movementManagementPage.newMovementMenu()
 })
 
 And("preencher campos deixando datas em branco", () => {
-    MovementManagementPage.noDateFieldFill()
+    movementManagementPage.noDateFieldFill()
 })
 
 Then("deve ser exibida mensagem de erro de campos obrigatorios", () => {
-    MovementManagementPage.errorMovementMessage()
+    movementManagementPage.errorMovementMessage()
 })
 
 When("clicar na opçao Criar Movimentaçao", () => {
-    MovementManagementPage.newMovementMenu()
+    movementManagementPage.newMovementMenu()
 })
 
 And("preencher campos deixando datas com formato incorreto", () => {
-    MovementManagementPage.invalidDateFieldFill()
+    movementManagementPage.invalidDateFieldFill()
 })
 
 Then("deve ser exibida mensagem de erro de data invalido", () => {
-    MovementManagementPage.invalidDateMessage()
+    movementManagementPage.invalidDateMessage()
 })
 
 When("clicar na opçao Criar Movimentaçao", () => {
-    MovementManagementPage.newMovementMenu()
+    movementManagementPage.newMovementMenu()
 })
 
 And("preencher campos deixando datas movitenção com data futura", () => {
-    MovementManagementPage.futureDateFieldFill()
+    movementManagementPage.futureDateFieldFill()
 })
      
 Then("deve ser exibida mensagem de erro de data futura", () => {
-    MovementManagementPage.errorFutureDateMessage()
+    movementManagementPage.errorFutureDateMessage()
 })
 
 When("clicar na opçao Contas", () => {
-    MovementManagementPage.clickBillsMenu()
+    movementManagementPage.clickBillsMenu()
 })
 
 And("clicar submenu Listar", () => {
-    MovementManagementPage.billsList()
+    movementManagementPage.billsList()
 })
 
 And("clicar no icone de exclusão de uma conta com movimentacao", () => {
-    MovementManagementPage.deleteBillsMovement()
+    movementManagementPage.deleteBillsMovement()
 })
 
 Then("deve ser exibida mensagem de erro ao tentar excluir conta", () => {
-    MovementManagementPage.deleErrorMessage()
+    movementManagementPage.deleErrorMessage()
 })
 
 When("clicar no na opção Contas", () => {
-    MovementManagementPage.clickBillsMenu()
+    movementManagementPage.clickBillsMenu()
 })
 
 And("clicar no submenu Adicionar", () => {
-    MovementManagementPage.addSubmenu()
+    movementManagementPage.addSubmenu()
 })
 
 And("salvar um nome de conta ja existente", () => {
-    MovementManagementPage.addBills()
+    movementManagementPage.addBills()
 })  
 
 Then("devera ser exibida uma mensagem de erro", () => {
-    MovementManagementPage.errorAddMessage()
+    movementManagementPage.errorAddMessage()
 })

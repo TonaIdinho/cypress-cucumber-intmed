@@ -8,8 +8,8 @@ class MovementManagementPage {
     
     homePage(){
         cy.visit(url)
-        cy.get(movementManagementElements.inputEmail()).click().type("angelinarodrigues@teste.com")
-        cy.get(movementManagementElements.inputPassword()).click().type('testeadmin')  
+        cy.get(movementManagementElements.inputEmail()).click().type("ton.teste@teste.com")
+        cy.get(movementManagementElements.inputPassword()).click().type('abcd,1234')  
         cy.get(movementManagementElements.enterButton()).click()
         cy.get(movementManagementElements.alert()).contains('Bem vindo')       
     }
@@ -19,7 +19,7 @@ class MovementManagementPage {
     }
 
     fillValidFields(){
-        cy.get(movementManagementElements.movementDate()).type('09/04/2023')
+        cy.get(movementManagementElements.movementDate()).type('08/04/2023')
         cy.get(movementManagementElements.paymentDate()).type('15/04/2023')
         cy.get(movementManagementElements.description()).type('teste movimentação valida')
         cy.get(movementManagementElements.interested()).type('teste')
@@ -47,8 +47,8 @@ class MovementManagementPage {
     }
 
     invalidDateFieldFill(){
-        cy.get(movementManagementElements.movementDate()).type('09.04.2023')
-        cy.get(movementManagementElements.paymentDate()).type('15/04/2023')
+        cy.get(movementManagementElements.movementDate()).type('20.04.2023')
+        cy.get(movementManagementElements.paymentDate()).type('24/04/2023')
         cy.get(movementManagementElements.description()).type('teste movimentação formato data invalida')
         cy.get(movementManagementElements.interested()).type('teste')
         cy.get(movementManagementElements.price()).type('1000')
@@ -75,34 +75,33 @@ class MovementManagementPage {
     }
 
     clickBillsMenu(){
-        cy.get(movimentacaoElements.billsMenu()).click()
+        cy.get(movementManagementElements.billsMenu()).click()
     }
 
     billsList(){
-        cy.get(movimentacaoElements.listSubmenu()).click()
+        cy.get(movementManagementElements.listSubmenu()).click()
     }    
 
     deleteBillsMovement(){
-        cy.get(movimentacaoElements.billsList()).contains('Conta para movimentacoes')
-        cy.get(movimentacaoElements.deleteIcon()).click()
+        cy.get(movementManagementElements.deleteIcon()).click()
     }
 
     deleErrorMessage(){
-        cy.get(movimentacaoElements.alert()).contains('Conta em uso na movimentações')
+        cy.get(movementManagementElements.alert()).contains('Conta em uso na movimentações')
     }        
       
     addSubmenu(){
-        cy.get(movimentacaoElements.addSubmenu()).click()
+        cy.get(movementManagementElements.addSubmenu()).click()
     }  
 
     addBills(){       
         
-        cy.get(movimentacaoElements.inputBillsName()).type('Conta Teste')
-        cy.get(movimentacaoElements.saveButton()).click()
+        cy.get(movementManagementElements.inputBillsName()).type('Conta Teste')
+        cy.get(movementManagementElements.saveButton()).click()
     }
 
     errorAddMessage(){
-        cy.get(movimentacaoElements.alert()).contains('Já existe uma conta com esse nome!')
+        cy.get(movementManagementElements.alert()).contains('Já existe uma conta com esse nome!')
     }    
 }
 export default MovementManagementPage;

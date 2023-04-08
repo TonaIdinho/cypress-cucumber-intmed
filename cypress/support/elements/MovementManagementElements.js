@@ -16,7 +16,7 @@ class MovementManagementElements {
     billsMenu = () => { return '.dropdown-toggle' }
     listSubmenu = () => {return '.dropdown-menu > :nth-child(2) > a'}     
     billsList = () => {return '#tabelaContas'}
-    deleteIcon = () => {return '[href="/removerConta?id=1636178"] > .glyphicon'}
+    deleteIcon = () => {return '[href="/removerConta?id=1695341"] > .glyphicon'}
 
     addSubmenu = () => {return '.dropdown-menu > :nth-child(1) > a'}
     inputBillsName = () => {return '#nome'}

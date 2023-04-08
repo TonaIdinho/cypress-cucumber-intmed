@@ -11,8 +11,8 @@ class LoginPage {
     }
 
     validFieldsFill(){
-        cy.get(loginElements.inputEmail()).click().type("angelinarodrigues@teste.com")
-        cy.get(loginElements.inputPassword()).click().type('testeadmin')       
+        cy.get(loginElements.inputEmail()).click().type("user.test112245780@gmail.com")
+        cy.get(loginElements.inputPassword()).click().type('usertest112245780')       
     }
 
     clickEnterButton(){
@@ -24,7 +24,7 @@ class LoginPage {
     }
    
     invalidFieldsFill(){
-        cy.get(loginElements.inputEmail()).click().type("email@invalido.com")
+        cy.get(loginElements.inputEmail()).click().type("email12345678@invalido.com")
         cy.get(loginElements.inputPassword()).click().type('testeinvalido') 
     }
 

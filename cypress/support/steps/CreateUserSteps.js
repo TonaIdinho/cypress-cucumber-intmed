@@ -10,7 +10,7 @@ When("o usuario clicar na opçao Novo usuario no canto superior esquerdo", () =>
     createUserPage.clickNewUserButton()
 })
 
-And("preencher todos os campos com credenciais validas", () => {
+And("preencher todos os campos com credencial valida", () => {
     createUserPage.fillValidFields()
 })
 
