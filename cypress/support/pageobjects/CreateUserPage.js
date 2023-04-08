@@ -15,9 +15,9 @@ class RegisterPage {
     }
 
     fillValidFields(){
-        cy.get(createUserElements.inputName()).type('User Test124578')    
-        cy.get(createUserElements.inputEmail()).type('user.test124578@gmail.com')      
-        cy.get(createUserElements.inputPassword()).type('usertest124578')
+        cy.get(createUserElements.inputName()).type('User Test112245780')    
+        cy.get(createUserElements.inputEmail()).type('user.test112245780@gmail.com')      
+        cy.get(createUserElements.inputPassword()).type('usertest112245780')
     }
 
     registerButton(){

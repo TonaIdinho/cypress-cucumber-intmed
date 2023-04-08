@@ -3,21 +3,21 @@ import CreateUserPage from '../pageobjects/CreateUserPage'
 const createUserPage = new CreateUserPage
 
 Given("que o usuario esteja na tela de login do site Seu Barriga", () => {
-    CreateUserPage.homePage()
+    createUserPage.homePage()
 })
 
-When("o usuario clicar na opçao Novo usuario? no canto superior esquerdo", () => {
-    CreateUserPage.clickNewUserButton()
+When("o usuario clicar na opçao Novo usuario no canto superior esquerdo", () => {
+    createUserPage.clickNewUserButton()
 })
 
 And("preencher todos os campos com credenciais validas", () => {
-    CreateUserPage.fillValidFields()
+    createUserPage.fillValidFields()
 })
 
 And("clicar no botao Cadastrar", () => {
-    CreateUserPage.registerButton()
+    createUserPage.registerButton()
 })
 
 Then("deve ser a exibida a mensagem Usuario inserido com sucesso", () => {
-    CreateUserPage.successMessage()
+    createUserPage.successMessage()
 })

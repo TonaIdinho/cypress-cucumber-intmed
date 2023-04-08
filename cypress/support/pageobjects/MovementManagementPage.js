@@ -19,8 +19,8 @@ class MovementManagementPage {
     }
 
     fillValidFields(){
-        cy.get(movementManagementElements.movementDate()).type('09/03/2023')
-        cy.get(movementManagementElements.paymentDate()).type('15/03/2023')
+        cy.get(movementManagementElements.movementDate()).type('09/04/2023')
+        cy.get(movementManagementElements.paymentDate()).type('15/04/2023')
         cy.get(movementManagementElements.description()).type('teste movimentação valida')
         cy.get(movementManagementElements.interested()).type('teste')
         cy.get(movementManagementElements.price()).type('1000')
@@ -47,8 +47,8 @@ class MovementManagementPage {
     }
 
     invalidDateFieldFill(){
-        cy.get(movementManagementElements.movementDate()).type('09.03.2023')
-        cy.get(movementManagementElements.paymentDate()).type('15/03/2023')
+        cy.get(movementManagementElements.movementDate()).type('09.04.2023')
+        cy.get(movementManagementElements.paymentDate()).type('15/04/2023')
         cy.get(movementManagementElements.description()).type('teste movimentação formato data invalida')
         cy.get(movementManagementElements.interested()).type('teste')
         cy.get(movementManagementElements.price()).type('1000')
@@ -61,8 +61,8 @@ class MovementManagementPage {
     }
 
     futureDateFieldFill(){
-        cy.get(movementManagementElements.movementDate()).type('15/03/2023')
-        cy.get(movementManagementElements.paymentDate()).type('15/03/2023')
+        cy.get(movementManagementElements.movementDate()).type('15/04/2023')
+        cy.get(movementManagementElements.paymentDate()).type('15/04/2023')
         cy.get(movementManagementElements.description()).type('teste movimentação data futura')
         cy.get(movementManagementElements.interested()).type('teste')
         cy.get(movementManagementElements.price()).type('1000')
